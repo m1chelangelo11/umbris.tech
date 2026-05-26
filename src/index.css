@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+@theme {
+  --color-cream: #f7f6f4;
+  --color-orange: #fe7141;
+  --color-purple: #cdabfe;
+  --color-teal: #597e87;
+  --color-sky: #f5f9fc;
+  --color-navy: #153250;
+  --color-sage: #d1ddd3;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: Inter, system-ui, sans-serif;
+  --font-hero: 'Satoshi', Inter, system-ui, sans-serif;
+  --font-mono: Inter, system-ui, sans-serif;
+
+  --spacing-global: clamp(1.25rem, 4vw, 3rem);
+}
+
+@layer base {
+  html {
+    overflow-anchor: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-black text-cream font-sans;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-hero {
+    font-family: var(--font-hero);
+    font-weight: 700;
+  }
+
+  .font-medium {
+    font-family: var(--font-sans);
+    font-weight: 500;
+  }
+
+  .font-regular {
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  .font-label {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .font-beausite-medium {
+    font-family: var(--font-sans);
+    font-weight: 500;
+  }
+
+  .font-beausite-regular {
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  .px-global {
+    padding-inline: var(--spacing-global);
+  }
+
+  .tracking-tight-display {
+    letter-spacing: -0.03em;
+  }
+
+  .tracking-tight-nav {
+    letter-spacing: -0.04em;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
