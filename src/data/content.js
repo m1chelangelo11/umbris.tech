@@ -2,16 +2,15 @@ const BRAND = 'Rozpierdlalamy Polską Zbrojeniówkę.'
 
 export const COMPANY = {
   name: BRAND,
-  legalName: 'Rozpierdlalamy Polską Zbrojeniówkę Sp. z o.o.',
+  legalName: 'Umbris Sp. z o.o.',
   tagline: 'Ochrona przed dronami w czasie rzeczywistym',
-  heroTitle: `Rozpierdlalamy
-Polską Zbrojeniówkę.`,
+  heroTitle: `Umbris`,
   heroSubtitle:
     'Rozwiązania przeciwko dronom dla infrastruktury krytycznej, przemysłu i instytucji',
-  heroMeta: 'Projektujemy, wdrażamy i utrzymujemy systemy C-UAS end-to-end',
+  heroMeta: 'Projektujemy i wdrażamy systemy detekcji dronów w czasie rzeczywistym',
   scrollLabel: 'Przewiń, aby dowiedzieć się więcej',
   missionQuote:
-    'Bezpieczna przestrzeń nie zaczyna się od reakcji na incydent — zaczyna się od wczesnego wykrycia i pewnej neutralizacji zagrożenia z powietrza.',
+    'Bezpieczna przestrzeń nie zaczyna się od reakcji na incydent - zaczyna się od wczesnego wykrycia.',
   missionAuthor: 'Zespół Rozpierdlalamy Polską Zbrojeniówkę',
   missionRole: 'Systemy antydrone',
 }
