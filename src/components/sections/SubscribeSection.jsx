@@ -1,4 +1,4 @@
-import { COMPANY, COMPANY_STATS } from '../../data/content'
+import { COMPANY_STATS } from '../../data/content'
 import { ScrollSection } from '@/components/core/scroll-section'
 import { ScrollText } from '@/components/core/scroll-text'
 
@@ -31,11 +31,13 @@ export default function SubscribeSection() {
                 name="email"
                 type="email"
                 placeholder="Twój adres e-mail"
-                className="h-12 flex-1 border border-black/30 bg-transparent px-4 font-beausite-regular text-[16px] outline-none placeholder:text-black/45 focus:border-black"
+                disabled
+                className="h-12 flex-1 border border-black/30 bg-transparent px-4 font-beausite-regular text-[16px] outline-none placeholder:text-black/45 focus:border-black disabled:cursor-not-allowed disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="h-12 whitespace-nowrap bg-black px-6 font-beausite-medium text-[16px] text-cream transition-opacity hover:opacity-90"
+                disabled
+                className="h-12 whitespace-nowrap bg-black px-6 font-beausite-medium text-[16px] text-cream transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Wyślij
               </button>
@@ -45,7 +47,7 @@ export default function SubscribeSection() {
               as="p"
               className="mt-4 max-w-[70ch] font-beausite-regular text-[14px] leading-[1.3] text-black/60"
             >
-              {`Wysyłając formularz, wyrażasz zgodę na kontakt w sprawie oferty ${COMPANY.legalName}. Dane przetwarzamy zgodnie z RODO.`}
+              Formularz kontaktowy jest w przygotowaniu — wkrótce będzie można wysłać zapytanie bezpośrednio stąd.
             </ScrollText>
           </div>
 

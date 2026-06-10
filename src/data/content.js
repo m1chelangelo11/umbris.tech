@@ -1,4 +1,4 @@
-const BRAND = 'Rozpierdlalamy Polską Zbrojeniówkę.'
+const BRAND = 'Umbris'
 
 export const COMPANY = {
   name: BRAND,
@@ -11,21 +11,8 @@ export const COMPANY = {
   scrollLabel: 'Przewiń, aby dowiedzieć się więcej',
   missionQuote:
     'Bezpieczna przestrzeń nie zaczyna się od reakcji na incydent - zaczyna się od wczesnego wykrycia.',
-  missionAuthor: 'Zespół Rozpierdlalamy Polską Zbrojeniówkę',
+  missionAuthor: 'Zespół Umbris',
   missionRole: 'Systemy antydrone',
-}
-
-export const ASSETS = {
-  heroVideo:
-    '/YTDown_YouTube_Drone-racing-footage-of-abandoned-coal-f_Media_CpXa8K1BhI_001_1080p.mp4',
-  solutionVideos: {
-    detection:
-      'https://framerusercontent.com/assets/GxhkDLcDBfujafaVJCiFKoxE.webm',
-    neutralization:
-      'https://framerusercontent.com/assets/lL79Fmd1Pvt2WDRdt11xdoPD3Uw.webm',
-    integration:
-      'https://framerusercontent.com/assets/n4xIX9MPpD5lGFog1WLZ2I2UQyY.webm',
-  },
 }
 
 export const NAV_LINKS = [
@@ -58,7 +45,6 @@ export const SOLUTIONS = [
       'Rejestr zdarzeń i raportowanie incydentów',
     ],
     cta: 'Poznaj moduł wykrywania',
-    video: ASSETS.solutionVideos.detection,
   },
   {
     id: 'neutralization',
@@ -74,7 +60,6 @@ export const SOLUTIONS = [
       'Współpraca z służbami i ochroną obiektu',
     ],
     cta: 'Poznaj moduł neutralizacji',
-    video: ASSETS.solutionVideos.neutralization,
   },
   {
     id: 'integration',
@@ -90,7 +75,6 @@ export const SOLUTIONS = [
       'Wdrożenie on-premise, edge lub hybrydowe',
     ],
     cta: 'Poznaj platformę integracyjną',
-    video: ASSETS.solutionVideos.integration,
   },
 ]
 

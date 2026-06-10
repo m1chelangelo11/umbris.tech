@@ -1,5 +1,5 @@
 import { ScrollText } from '@/components/core/scroll-text'
-import { ASSETS, COMPANY } from '../../data/content'
+import { COMPANY } from '../../data/content'
 
 export default function Hero() {
   return (
@@ -8,15 +8,9 @@ export default function Hero() {
       className="relative flex min-h-screen flex-col justify-end overflow-hidden pt-[72px]"
     >
       <div className="absolute inset-0">
-        <video
-          src={ASSETS.heroVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="h-full w-full object-cover"
-        />
+        {/* Placeholder background — swap for hero footage/photo when available */}
+        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,var(--color-orange)_0%,transparent_45%),radial-gradient(circle_at_80%_30%,var(--color-purple)_0%,transparent_45%),radial-gradient(circle_at_50%_90%,var(--color-teal)_0%,transparent_55%)] opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
       </div>
 

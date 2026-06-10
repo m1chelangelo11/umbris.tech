@@ -1,9 +1,18 @@
+import { Network, Radar, Zap } from 'lucide-react'
 import { SOLUTIONS } from '../../data/content'
 import { ScrollSection } from '@/components/core/scroll-section'
 import { ScrollText } from '@/components/core/scroll-text'
 import ArrowLink from '../ui/ArrowLink'
 
+const SOLUTION_ICONS = {
+  detection: Radar,
+  neutralization: Zap,
+  integration: Network,
+}
+
 function SolutionCard({ solution }) {
+  const Icon = SOLUTION_ICONS[solution.id]
+
   return (
     <article
       id={solution.anchor}
@@ -50,16 +59,11 @@ function SolutionCard({ solution }) {
             </div>
           </div>
 
-          <div className="h-[280px] md:h-[360px] lg:h-auto">
-            <video
-              src={solution.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="h-full w-full object-cover"
-            />
+          {/* Placeholder visual — swap for solution footage/screenshots when available */}
+          <div
+            className={`flex h-[280px] items-center justify-center md:h-[360px] lg:h-auto ${solution.accent}`}
+          >
+            <Icon className="h-16 w-16 text-black/25" strokeWidth={1} aria-hidden="true" />
           </div>
         </div>
       </ScrollSection>
