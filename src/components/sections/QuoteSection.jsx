@@ -18,7 +18,7 @@ export default function QuoteSection() {
               className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-black font-display text-[20px] text-cream md:h-16 md:w-16 md:text-[22px]"
               aria-hidden
             >
-              R
+              U
             </div>
             <div>
               <ScrollText

@@ -1,16 +1,43 @@
-# React + Vite
+# Umbris — website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Company website for [umbris.tech](https://umbris.tech) — C-UAS (counter-drone)
+systems for critical infrastructure, industry, and institutions.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [React 19](https://react.dev) + [Vite](https://vite.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Motion](https://motion.dev) + [Lenis](https://lenis.darkroom.engineering) (animations, smooth scroll)
+- [lucide-react](https://lucide.dev) (icons)
 
-## React Compiler
+## Local development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # dev server
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+npm run lint     # ESLint
+```
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/data/content.js` — all page copy (PL)
+- `src/components/sections/` — homepage sections (Hero, Chapters, CaseStudies, ...)
+- `src/components/layout/` — Header, Footer, LenisProvider
+- `src/components/core/` — scroll animation primitives (`ScrollSection`, `ScrollText`)
+- `src/components/ui/` — small reusable UI elements
+
+## Deploy
+
+The site is built and deployed automatically to GitHub Pages via
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every push
+to `master`. The `umbris.tech` domain is added to the build as `dist/CNAME`
+during that workflow.
+
+## Known TODOs
+
+- The contact form (`SubscribeSection`) is disabled until a form backend
+  (e.g. Web3Forms/Formspree) is wired up.
+- The backgrounds in the Hero section and solution modules (`Chapters`) are
+  temporary placeholders — swap for real video/photos when available.

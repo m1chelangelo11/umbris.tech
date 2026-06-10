@@ -2,6 +2,12 @@
   "name": "stronawww-umbris",
   "private": true,
   "version": "0.0.0",
+  "description": "Strona firmowa Umbris (umbris.tech) — systemy C-UAS, ochrona przed dronami dla infrastruktury krytycznej, przemysłu i instytucji.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m1chelangelo11/umbris.tech"
+  },
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +16,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "clsx": "^2.1.1",
     "lenis": "^1.3.23",
     "lucide-react": "^1.16.0",
