@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useRef } from 'react'
+import { createContext, useContext, useRef } from 'react'
 import { useInView } from 'motion/react'
-import { useLenis } from '@/components/layout/LenisProvider'
 
 const ScrollSectionContext = createContext(null)
 
@@ -14,19 +13,12 @@ export function useScrollSection() {
 export function ScrollSection({
   children,
   className = '',
-  once = true,
+  once = false,
   amount = 0.25,
   margin = '0px 0px -12% 0px',
 }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once, amount, margin })
-  const lenisRef = useLenis()
-
-  useEffect(() => {
-    if (isInView) {
-      lenisRef?.current?.resize()
-    }
-  }, [isInView, lenisRef])
 
   return (
     <ScrollSectionContext.Provider value={isInView}>

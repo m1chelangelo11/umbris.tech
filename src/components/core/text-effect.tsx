@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
 import {
-  AnimatePresence,
   motion
 } from 'motion/react';
 import type {
@@ -264,30 +263,25 @@ export function TextEffect({
   };
 
   return (
-    <AnimatePresence mode='popLayout'>
-      {trigger && (
-        <MotionTag
-          initial='hidden'
-          animate='visible'
-          exit='exit'
-          variants={computedVariants.container}
-          className={className}
-          onAnimationComplete={onAnimationComplete}
-          onAnimationStart={onAnimationStart}
-          style={style}
-        >
-          {per !== 'line' ? <span className='sr-only'>{children}</span> : null}
-          {segments.map((segment, index) => (
-            <AnimationComponent
-              key={`${per}-${index}-${segment}`}
-              segment={segment}
-              variants={computedVariants.item}
-              per={per}
-              segmentWrapperClassName={segmentWrapperClassName}
-            />
-          ))}
-        </MotionTag>
-      )}
-    </AnimatePresence>
+    <MotionTag
+      initial='hidden'
+      animate={trigger ? 'visible' : 'hidden'}
+      variants={computedVariants.container}
+      className={className}
+      onAnimationComplete={onAnimationComplete}
+      onAnimationStart={onAnimationStart}
+      style={style}
+    >
+      {per !== 'line' ? <span className='sr-only'>{children}</span> : null}
+      {segments.map((segment, index) => (
+        <AnimationComponent
+          key={`${per}-${index}-${segment}`}
+          segment={segment}
+          variants={computedVariants.item}
+          per={per}
+          segmentWrapperClassName={segmentWrapperClassName}
+        />
+      ))}
+    </MotionTag>
   );
 }

@@ -26,7 +26,7 @@ export function ScrollText({
   per = 'line',
   variants = lineRevealVariants,
   segmentWrapperClassName = 'overflow-hidden block',
-  once = true,
+  once = false,
   amount = 0.35,
   margin = '0px 0px -10% 0px',
   inline = false,
