@@ -1,5 +1,5 @@
 import { SECTORS } from '../../data/content'
-import { useLanguage } from '../layout/LanguageProvider'
+import { useLanguage } from '../layout/useLanguage'
 
 export default function Ticker() {
   const { lang } = useLanguage()

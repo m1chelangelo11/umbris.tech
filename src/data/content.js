@@ -36,8 +36,8 @@ export const STATS = [
       en: 'Relay node range',
     },
     extra: {
-      pl: 'Węzły Meshtastic tworzą samoorganizującą się sieć bez zależności od infrastruktury telekomunikacyjnej.',
-      en: 'Meshtastic nodes form a self-organizing network with no dependency on telecom infrastructure.',
+      pl: 'Węzły sieci mesh tworzą samoorganizującą się strukturę bez zależności od infrastruktury telekomunikacyjnej.',
+      en: 'Mesh network nodes form a self-organizing structure with no dependency on telecom infrastructure.',
     },
   },
   {
@@ -77,8 +77,8 @@ export const SOLUTIONS = [
     },
     topics: [
       {
-        pl: 'Node A: RF/SDR — Node B: radar mmWave — Node C: kamera',
-        en: 'Node A: RF/SDR — Node B: mmWave radar — Node C: camera',
+        pl: 'Węzeł A: detekcja RF — Węzeł B: radar — Węzeł C: kamera',
+        en: 'Node A: RF detection — Node B: radar — Node C: camera',
       },
       {
         pl: 'Fuzja danych z wielu węzłów → 95%+ confidence',
@@ -114,8 +114,8 @@ export const SOLUTIONS = [
         en: 'Local ML models on every sensor node',
       },
       {
-        pl: 'Federated learning — sieć uczy się jako całość',
-        en: 'Federated learning — the network learns as a whole',
+        pl: 'Rozproszone uczenie maszynowe — sieć doskonali się jako całość',
+        en: 'Distributed machine learning — the network improves as a whole',
       },
       {
         pl: 'Klasyfikacja: drony, śmigłowce, pojazdy, strzały',
@@ -134,8 +134,8 @@ export const SOLUTIONS = [
   {
     id: 'mesh',
     name: {
-      pl: 'Sieć Meshtastic',
-      en: 'Meshtastic Mesh',
+      pl: 'Sieć Mesh',
+      en: 'Mesh Network',
     },
     subtitle: {
       pl: 'Samoorganizująca się sieć do 1000 węzłów',
@@ -159,8 +159,8 @@ export const SOLUTIONS = [
         en: 'Operates in GPS-denied and RF-degraded environments',
       },
       {
-        pl: 'Niski koszt węzła: hardware komercyjny klasy COTS',
-        en: 'Low node cost: commercial off-the-shelf (COTS) hardware',
+        pl: 'Niski koszt węzła: ogólnodostępny hardware komercyjny',
+        en: 'Low node cost: commercially available hardware',
       },
     ],
   },
@@ -176,16 +176,16 @@ export const SOLUTIONS = [
     },
     topics: [
       {
-        pl: 'Natywna integracja z TAK (ATAK / WinTAK / iTAK)',
-        en: 'Native integration with TAK (ATAK / WinTAK / iTAK)',
+        pl: 'Natywna integracja z systemami dowodzenia i kontroli (C2)',
+        en: 'Native integration with command and control (C2) systems',
       },
       {
-        pl: 'Eksport danych w formacie CoT (Cursor on Target)',
-        en: 'Data export in CoT (Cursor on Target) format',
+        pl: 'Eksport danych w standardowych formatach wymiany informacji',
+        en: 'Data export in standard interoperability formats',
       },
       {
-        pl: 'API dla systemów SOC, PSIM i BMS',
-        en: 'API for SOC, PSIM and BMS systems',
+        pl: 'API dla systemów bezpieczeństwa i zarządzania obiektem',
+        en: 'API for security and facility management systems',
       },
       {
         pl: 'Integracja z CCTV i istniejącym monitoringiem',
@@ -206,10 +206,10 @@ export const SYSTEM_LAYERS = [
       en: 'Sensor layer',
     },
     nodes: [
-      { pl: 'SDR / RF', en: 'SDR / RF' },
-      { pl: 'Radar mmWave', en: 'mmWave radar' },
+      { pl: 'Detekcja RF', en: 'RF detection' },
+      { pl: 'Radar', en: 'Radar' },
       { pl: 'Kamera optyczna', en: 'Optical camera' },
-      { pl: 'Mikrofon MEMS', en: 'MEMS microphone' },
+      { pl: 'Mikrofon akustyczny', en: 'Acoustic sensor' },
     ],
   },
   {
@@ -230,7 +230,7 @@ export const SYSTEM_LAYERS = [
     },
     nodes: [
       { pl: 'Szyfrowany kanał', en: 'Encrypted channel' },
-      { pl: 'Protokół Meshtastic', en: 'Meshtastic protocol' },
+      { pl: 'Protokół mesh', en: 'Mesh protocol' },
       { pl: 'API integracyjne', en: 'Integration API' },
     ],
   },
@@ -364,18 +364,18 @@ export const translations = {
     stat_tag: 'Sieć DetMesh',
     stat_head: 'Skala,\nktórej nikt\nnie ma',
     stat_desc:
-      'DetMesh to platforma wywiadowcza nowego rodzaju — oparta na rozproszonej sieci niskokosztowych węzłów sensorycznych połączonych protokołem Meshtastic.',
+      'DetMesh to platforma wywiadowcza nowego rodzaju — oparta na rozproszonej sieci niskokosztowych węzłów sensorycznych połączonych siecią mesh dalekiego zasięgu.',
 
     about_tag: 'O nas',
     about_q:
       'Nie jedna droga instalacja. Tysiąc tanich węzłów, które razem widzą więcej — i działają tam, gdzie infrastruktura nie dociera.',
     about_p:
-      'DetMesh to platforma wywiadowcza oparta na sieci węzłów sensorycznych połączonych protokołem Meshtastic. Każdy węzeł przetwarza dane lokalnie. Collaborative sensing łączy fragmentaryczne obserwacje setek węzłów w spójny obraz przestrzeni powietrznej — bez chmury, bez centralnego serwera.',
+      'DetMesh to platforma wywiadowcza oparta na sieci węzłów sensorycznych połączonych własną siecią mesh dalekiego zasięgu. Każdy węzeł przetwarza dane lokalnie. Collaborative sensing łączy fragmentaryczne obserwacje setek węzłów w spójny obraz przestrzeni powietrznej — bez chmury, bez centralnego serwera.',
     about_adv_hd: 'Kluczowe przewagi',
     about_adv1: 'Mesh zamiast jednej instalacji — skaluj od 1 do 1000 węzłów',
     about_adv2: 'Edge AI bez chmury — inferencja lokalna, działa offline',
-    about_adv3: 'Natywna integracja z TAK (ATAK, WinTAK, iTAK)',
-    about_adv4: 'COTS hardware — niski koszt wdrożenia i utrzymania',
+    about_adv3: 'Natywna integracja z systemami dowodzenia i kontroli',
+    about_adv4: 'Hardware komercyjny — niski koszt wdrożenia i utrzymania',
     about_adv5: 'Wielozagrożeniowa detekcja — drony, śmigłowce, pojazdy, strzały, emisje RF',
 
     sol_tag: 'Rozwiązania',
@@ -411,18 +411,18 @@ export const translations = {
     stat_tag: 'DetMesh Network',
     stat_head: 'Scale\nnobody\nelse has',
     stat_desc:
-      'DetMesh is a new-generation airspace intelligence platform built on a distributed network of low-cost sensor nodes connected via Meshtastic.',
+      'DetMesh is a new-generation airspace intelligence platform built on a distributed network of low-cost sensor nodes connected via a long-range mesh network.',
 
     about_tag: 'About us',
     about_q:
       "Not one expensive installation. A thousand cheap nodes that see more together — operating where infrastructure doesn't reach.",
     about_p:
-      'DetMesh is an airspace intelligence platform built on a network of sensor nodes connected via Meshtastic. Each node processes data locally. Collaborative sensing fuses observations from hundreds of nodes into a coherent airspace picture — no cloud, no central server.',
+      'DetMesh is an airspace intelligence platform built on a network of sensor nodes connected via its own long-range mesh network. Each node processes data locally. Collaborative sensing fuses observations from hundreds of nodes into a coherent airspace picture — no cloud, no central server.',
     about_adv_hd: 'Key advantages',
     about_adv1: 'Mesh instead of a single installation — scale from 1 to 1,000 nodes',
     about_adv2: 'Edge AI without cloud — local inference, works offline',
-    about_adv3: 'Native TAK integration (ATAK, WinTAK, iTAK)',
-    about_adv4: 'COTS hardware — low deployment and maintenance cost',
+    about_adv3: 'Native integration with command and control systems',
+    about_adv4: 'Commercial hardware — low deployment and maintenance cost',
     about_adv5: 'Multi-threat detection — drones, helicopters, vehicles, gunshots, RF emissions',
 
     sol_tag: 'Solutions',

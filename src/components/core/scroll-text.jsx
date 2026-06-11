@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useInView } from 'motion/react'
 import { TextEffect } from '@/components/core/text-effect'
 import { lineRevealVariants } from './text-effect-variants'
-import { useScrollSection } from './scroll-section'
+import { useScrollSection } from './useScrollSection'
 
 function normalizeLineText(text) {
   if (text.includes('\n')) return text
@@ -26,7 +26,7 @@ export function ScrollText({
   per = 'line',
   variants = lineRevealVariants,
   segmentWrapperClassName = 'overflow-hidden block',
-  once = false,
+  once = true,
   amount = 0.35,
   margin = '0px 0px -10% 0px',
   inline = false,
@@ -76,5 +76,3 @@ export function ScrollText({
     </div>
   )
 }
-
-export { lineRevealVariants } from './text-effect-variants'

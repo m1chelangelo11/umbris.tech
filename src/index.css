@@ -4,7 +4,7 @@
   --color-bg: #0c0e0b;
   --color-bg2: #131610;
   --color-cream: #dedad0;
-  --color-dim: #5c5d55;
+  --color-dim: #82837a;
   --color-accent: #fe7141;
   --color-line: #1c1f18;
 
@@ -70,6 +70,10 @@
 
   .px-global {
     padding-inline: var(--spacing-global);
+  }
+
+  .right-content {
+    right: max(var(--spacing-global), calc((100% - 90rem) / 2 + var(--spacing-global)));
   }
 
   .tracking-tight-display {

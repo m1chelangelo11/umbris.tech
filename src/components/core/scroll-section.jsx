@@ -1,11 +1,6 @@
-import { createContext, useContext, useRef } from 'react'
+import { useRef } from 'react'
 import { useInView } from 'motion/react'
-
-const ScrollSectionContext = createContext(null)
-
-export function useScrollSection() {
-  return useContext(ScrollSectionContext)
-}
+import { ScrollSectionContext } from './useScrollSection'
 
 /**
  * Jedna animacja scroll dla całej sekcji — wszystkie ScrollText w środku startują razem.
@@ -13,7 +8,7 @@ export function useScrollSection() {
 export function ScrollSection({
   children,
   className = '',
-  once = false,
+  once = true,
   amount = 0.25,
   margin = '0px 0px -12% 0px',
 }) {
