@@ -1,14 +1,15 @@
 # Umbris — website
 
-Company website for [umbris.tech](https://umbris.tech) — C-UAS (counter-drone)
-systems for critical infrastructure, industry, and institutions.
+Company website for [umbris.tech](https://umbris.tech) — **DetMesh**, a
+distributed sensor-mesh airspace intelligence platform built on the
+Meshtastic protocol, for critical infrastructure, industry, and
+institutions. Available in Polish and English.
 
 ## Stack
 
 - [React 19](https://react.dev) + [Vite](https://vite.dev)
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [Motion](https://motion.dev) + [Lenis](https://lenis.darkroom.engineering) (animations, smooth scroll)
-- [lucide-react](https://lucide.dev) (icons)
 
 ## Local development
 
@@ -22,11 +23,12 @@ npm run lint     # ESLint
 
 ## Structure
 
-- `src/data/content.js` — all page copy (PL)
-- `src/components/sections/` — homepage sections (Hero, Chapters, CaseStudies, ...)
-- `src/components/layout/` — Header, Footer, LenisProvider
-- `src/components/core/` — scroll animation primitives (`ScrollSection`, `ScrollText`)
-- `src/components/ui/` — small reusable UI elements
+- `src/data/content.js` — all page copy, in Polish and English (`translations.pl` / `translations.en`), plus shared data (sectors, stats, solutions, system layers, cases, process steps)
+- `src/components/layout/LanguageProvider.jsx` — PL/EN language context (`useLanguage`, `t(key)`), persisted to `localStorage`
+- `src/components/sections/` — homepage sections: `Hero`, `Ticker`, `StatsBar`, `About`, `Solutions`, `SystemDiagram`, `Cases`, `Process`, `Contact`
+- `src/components/layout/` — `Header`, `Footer`, `LenisProvider`, `LanguageProvider`
+- `src/components/core/` — scroll animation primitives (`ScrollSection`, `ScrollText`, `TextEffect`)
+- `src/components/ui/` — small reusable UI elements (`SecTag`, `SectionHeader`)
 
 ## Deploy
 
@@ -34,10 +36,3 @@ The site is built and deployed automatically to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every push
 to `master`. The `umbris.tech` domain is added to the build as `dist/CNAME`
 during that workflow.
-
-## Known TODOs
-
-- The contact form (`SubscribeSection`) is disabled until a form backend
-  (e.g. Web3Forms/Formspree) is wired up.
-- The backgrounds in the Hero section and solution modules (`Chapters`) are
-  temporary placeholders — swap for real video/photos when available.
