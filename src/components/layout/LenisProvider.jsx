@@ -7,7 +7,7 @@ export function useLenis() {
   return useContext(LenisContext)
 }
 
-const NAV_OFFSET = 72
+const NAV_OFFSET = 64
 
 export default function LenisProvider({ children }) {
   const lenisRef = useRef(null)

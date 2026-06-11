@@ -1,29 +1,36 @@
 import Header from './components/layout/Header'
-import FooterSimple from './components/layout/FooterSimple'
+import Footer from './components/layout/Footer'
+import LanguageProvider from './components/layout/LanguageProvider'
 import LenisProvider from './components/layout/LenisProvider'
-import AboutIntro from './components/sections/AboutIntro'
-import CaseStudies from './components/sections/CaseStudies'
-import Chapters from './components/sections/Chapters'
+import About from './components/sections/About'
+import Cases from './components/sections/Cases'
+import Contact from './components/sections/Contact'
 import Hero from './components/sections/Hero'
-import Partners from './components/sections/Partners'
-import QuoteSection from './components/sections/QuoteSection'
-import SubscribeSection from './components/sections/SubscribeSection'
+import Process from './components/sections/Process'
+import Solutions from './components/sections/Solutions'
+import StatsBar from './components/sections/StatsBar'
+import SystemDiagram from './components/sections/SystemDiagram'
+import Ticker from './components/sections/Ticker'
 
 function App() {
   return (
-    <LenisProvider>
-      <Header />
-      <main>
-        <Hero />
-        <Partners />
-        <AboutIntro />
-        <QuoteSection />
-        <Chapters />
-        <CaseStudies />
-        <SubscribeSection />
-      </main>
-      <FooterSimple />
-    </LenisProvider>
+    <LanguageProvider>
+      <LenisProvider>
+        <Header />
+        <main>
+          <Hero />
+          <Ticker />
+          <StatsBar />
+          <About />
+          <Solutions />
+          <SystemDiagram />
+          <Cases />
+          <Process />
+          <Contact />
+        </main>
+        <Footer />
+      </LenisProvider>
+    </LanguageProvider>
   )
 }
 
