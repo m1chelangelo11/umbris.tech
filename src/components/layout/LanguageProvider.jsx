@@ -1,11 +1,6 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { translations } from '../../data/content'
-
-const LanguageContext = createContext(null)
-
-export function useLanguage() {
-  return useContext(LanguageContext)
-}
+import { LanguageContext } from './useLanguage'
 
 const STORAGE_KEY = 'umbris-lang'
 

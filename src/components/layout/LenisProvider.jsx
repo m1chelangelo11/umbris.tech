@@ -1,11 +1,6 @@
-import { createContext, useContext, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
-
-const LenisContext = createContext(null)
-
-export function useLenis() {
-  return useContext(LenisContext)
-}
+import { LenisContext } from './useLenis'
 
 const NAV_OFFSET = 64
 
